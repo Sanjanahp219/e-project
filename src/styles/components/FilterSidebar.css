@@ -1,0 +1,160 @@
+.filter-sidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #eaeaec;
+    padding: 20px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 85px;
+    max-height: calc(100vh - 85px);
+    overflow-y: auto;
+}
+
+.filter-sidebar:hover {
+    scrollbar-color: #bbbcbf transparent;
+}
+
+/* Webkit Scrollbar Styling */
+.filter-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.filter-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.filter-sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-sidebar:hover::-webkit-scrollbar-thumb {
+    background-color: #bbbcbf;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaec;
+}
+
+.filter-header h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    color: #ff3f6c;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaec;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+}
+
+.filter-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #282c3f;
+}
+
+.brand-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Custom Checkbox/Radio Styling */
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #282c3f;
+    cursor: pointer;
+    position: relative;
+    padding-left: 28px;
+    user-select: none;
+}
+
+.filter-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+}
+
+.checkmark.radio {
+    border-radius: 50%;
+}
+
+.filter-option:hover input~.checkmark {
+    border-color: #282c3f;
+}
+
+.filter-option input:checked~.checkmark {
+    background-color: #ff3f6c;
+    border-color: #ff3f6c;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.filter-option input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Checkbox tick */
+
+.filter-option .checkmark:not(.radio):after {
+    left: 6px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Radio dot */
+.filter-option .checkmark.radio:after {
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}

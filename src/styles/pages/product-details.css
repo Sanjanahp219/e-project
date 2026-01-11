@@ -1,0 +1,266 @@
+.pdp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 40px;
+    font-family: inherit;
+}
+
+/* Left Column: Image Gallery */
+.pdp-gallery {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.pdp-thumbnails {
+    display: flex;
+    flex-direction: column;
+    /* Or grid */
+    gap: 10px;
+    max-height: 600px;
+    /* Or fitting main image height */
+    overflow-y: auto;
+}
+
+.pdp-thumb {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border 0.2s;
+}
+
+.pdp-thumb.active {
+    border: 2px solid #ff3f6c;
+}
+
+.pdp-main-image {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+    /* Limit width */
+}
+
+.pdp-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* aspect-ratio: 4/5; */
+    /* Optional for clothing standard ratio */
+}
+
+
+/* Right Column: Product Info */
+.pdp-info {
+    flex: 1;
+}
+
+.pdp-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #282c3f;
+}
+
+.pdp-subtitle {
+    font-size: 20px;
+    color: #535766;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.pdp-price-box {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d4d5d9;
+}
+
+.pdp-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #282c3f;
+}
+
+.pdp-mrp {
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #7e818c;
+    margin-left: 10px;
+}
+
+.pdp-discount {
+    font-size: 16px;
+    color: #ff905a;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.pdp-tax-note {
+    display: block;
+    color: #03a685;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* Size Selector */
+.pdp-size-section {
+    margin-bottom: 24px;
+}
+
+.pdp-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size-chart-link {
+    color: #ff3f6c;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.size-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid #bfc0c6;
+    background: #fff;
+    color: #282c3f;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.size-btn:hover {
+    border-color: #ff3f6c;
+}
+
+.size-btn.selected {
+    border-color: #ff3f6c;
+    color: #ff3f6c;
+}
+
+
+/* Action Buttons */
+.pdp-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.btn-add-bag {
+    flex: 2;
+    /* Bigger width */
+    background-color: #ff3f6c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-add-bag:hover {
+    background-color: #f13562;
+}
+
+.btn-wishlist {
+    flex: 1;
+    background-color: #fff;
+    color: #282c3f;
+    border: 1px solid #d4d5d9;
+    border-radius: 4px;
+    padding: 14px 0;
+    /* Slightly less to match visual height with border */
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-wishlist:hover {
+    border-color: #282c3f;
+}
+
+
+/* Delivery */
+.pdp-delivery {
+    margin-bottom: 20px;
+}
+
+.delivery-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.delivery-input {
+    border: 1px solid #d4d5d9;
+    border-radius: 4px;
+    padding: 10px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.btn-check {
+    background: none;
+    border: none;
+    color: #ff3f6c;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+/* Description */
+.pdp-description {
+    line-height: 1.6;
+    font-size: 14px;
+    color: #282c3f;
+}
+
+/* Similar Products - Simple grid */
+.similar-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.similar-products h3 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+.btn-primary{margin:10px 0 0 0;}

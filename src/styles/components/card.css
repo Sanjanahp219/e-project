@@ -1,0 +1,6 @@
+.card {background: #fff;border-radius: var(--radius);padding: 16px;box-shadow: 0 6px 18px rgba(0,0,0,0.08);transition: 0.25s;}
+.card:hover {transform: translateY(-6px);box-shadow: 0 12px 30px rgba(0,0,0,0.12);}
+.card img {height: 160px;object-fit: contain;margin-bottom: 12px;}
+.card h4 {font-size: 14px;margin-bottom: 6px;}
+.product-image-container {width: 100%;max-width: 280px;}
+.product-image-container img {width: 100%;max-width: 280px;height: auto;}
